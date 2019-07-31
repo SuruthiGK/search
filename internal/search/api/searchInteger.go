@@ -29,6 +29,7 @@ func SearchIntegersFromString(c *gin.Context) {
 	re := regexp.MustCompile("[0-9]+")
 
 	result = re.FindAllString(params.Data, -1)
+	glog.Info("result: ", result)
 
 	if len(result) == 0 {
 		c.JSON(200, gin.H{"message": "No integer found in the string"})
