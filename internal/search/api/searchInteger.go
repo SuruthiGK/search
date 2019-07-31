@@ -30,7 +30,11 @@ func SearchIntegersFromString(c *gin.Context) {
 
 	result = re.FindAllString(params.Data, -1)
 
-	c.JSON(200, result)
+	if len(result) == 0 {
+		c.JSON(200, gin.H{"message": "No integer found in the string"})
+		return
+	}
 
+	c.JSON(200, result)
 	return
 }
