@@ -25,6 +25,14 @@
 #   unused-packages = true
 
 
+[[constraint]]
+  name = "github.com/gin-gonic/gin"
+  version = "1.4.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/golang/glog"
+
 [prune]
   go-tests = true
   unused-packages = true
