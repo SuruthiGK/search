@@ -11,6 +11,8 @@ RUN dep ensure -v -vendor-only
 
 COPY . .
 
+EXPOSE 5000
+
 WORKDIR /go/src/search/cmd/search
 
 RUN go build

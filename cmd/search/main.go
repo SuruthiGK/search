@@ -18,7 +18,7 @@ func main() {
 	//Routes
 	search.RouterMain(app)
 
-	err := app.Run()
+	err := app.Run("0.0.0.0:5000")
 	if err != nil {
 		panic(err)
 	}
