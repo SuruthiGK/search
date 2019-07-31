@@ -11,7 +11,7 @@ RUN dep ensure -v -vendor-only
 
 COPY . .
 
-WORKDIR /cmd/search
+WORKDIR /go/src/search/cmd/search
 
 RUN go build
 
