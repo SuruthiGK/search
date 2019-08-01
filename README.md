@@ -1,8 +1,8 @@
-# search : SearchApp returns integer(s) in string
+# search : Search returns integer(s) in string
 
 ## Overview [![GoDoc](https://godoc.org/github.com/SuruthiGK/search?status.svg)](https://godoc.org/github.com/SuruthiGK/search)
 
-Search App is built on Gin Framework.
+Search Api is built on Gin Framework.
 Request to the app can be made through POSTMAN or cURL.
 
 ## Install
