@@ -13,11 +13,9 @@ type RequestParams struct {
 }
 
 //SearchIntegersFromString searches for integers in the provided string
-//regex pattern is used to identify the integers in the string
 func SearchIntegersFromString(c *gin.Context) {
 
 	var params RequestParams
-	result := []string{}
 
 	err := c.BindJSON(&params)
 
@@ -27,11 +25,8 @@ func SearchIntegersFromString(c *gin.Context) {
 		return
 	}
 
-	glog.Info("searching integer ...")
+	result := Search(params.Data)
 
-	re := regexp.MustCompile("[0-9]+")
-
-	result = re.FindAllString(params.Data, -1)
 	glog.Info("result: ", result)
 
 	if len(result) == 0 {
@@ -41,4 +36,12 @@ func SearchIntegersFromString(c *gin.Context) {
 
 	c.JSON(200, result)
 	return
+}
+
+//Search
+//regex pattern is used to identify the integers in the string
+func Search(data string) []string {
+	re := regexp.MustCompile("[0-9]+")
+	result := re.FindAllString(data, -1)
+	return result
 }
