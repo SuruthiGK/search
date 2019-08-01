@@ -7,10 +7,13 @@ import (
 	"github.com/golang/glog"
 )
 
+//RequestParams accepts the data in the form of string
 type RequestParams struct {
 	Data string `json:"data"`
 }
 
+//SearchIntegersFromString searches for integers in the provided string
+//regex pattern is used to identify the integers in the string
 func SearchIntegersFromString(c *gin.Context) {
 
 	var params RequestParams

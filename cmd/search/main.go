@@ -8,20 +8,20 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//main --gin Engine instance is created
+//Routes to the end-points
+//host and port is specified for the app
 func main() {
-	fmt.Println("server started!!")
+	fmt.Println("server is up and running!!")
 	runtime.GOMAXPROCS(4)
 
-	// Config goes here
 	app := gin.Default()
 
-	//Routes
 	search.RouterMain(app)
 
 	err := app.Run("0.0.0.0:5000")
 	if err != nil {
 		panic(err)
 	}
-	//search.SearchIntegersFromString()
-	fmt.Println("server is up and running!!")
+	fmt.Println("server got fired!!!!")
 }
