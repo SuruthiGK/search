@@ -13,7 +13,7 @@ go get github.com/SuruthiGK/search
 
 ## To run docker
 ```
-docker run -p 5000:5000 suruthigk/search:test-0.0.5
+docker run -p 5000:5000 suruthigk/search:prod-0.0.0
 ```
 
 ## [[GoDoc]]
