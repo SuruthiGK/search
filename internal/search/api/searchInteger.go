@@ -1,3 +1,5 @@
+//Search app
+//searches through the string and returns integer(s) in the string.
 package api
 
 import (
